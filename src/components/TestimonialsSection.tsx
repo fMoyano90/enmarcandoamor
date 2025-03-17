@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import testimonio1 from '../assets/testimonio1.jpeg';
 
 // Datos de testimonios
 const testimonials = [
   {
     id: 1,
-    name: 'Carolina Mendoza',
-    role: 'Graduada de Pedagogía',
-    text: 'El cuadro que me hicieron para mi graduación es increíble. Capturaron perfectamente la esencia de ese momento tan especial. Cada vez que lo miro me emociono al recordar ese día tan importante.',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg'
+    name: 'Roxana Rodriguez',
+    role: 'Apoderada Colegio San Sebastián, 4to Medio A - 2024',
+    text: 'Recomiendo 💯% los Servicios Fotográficos. La  Atención prestada es cordial, te ayuda a elegir  elegir la mejor opción  en diseño. Sus tiempos de entrega  se cumplen en el plazo establecido y su precio es acordé al mercado. Experiencia cómoda y grata. 👌🏻',
+    avatar: testimonio1
   },
   {
     id: 2,
