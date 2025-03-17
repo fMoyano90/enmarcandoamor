@@ -294,17 +294,17 @@ export const GraduacionesPage = () => {
         </section>
 
         {/* Sección de Formulario */}
-        <section id="formulario" className="py-20">
+        <section id="formulario" className="py-12 sm:py-20">
           <div className="container mx-auto px-4">
             <motion.div 
-              className="text-center mb-12"
+              className="text-center mb-8 sm:mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-amor-verde-oscuro mb-4">Reserva Tu Sesión</h2>
-              <p className="text-amor-gris max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amor-verde-oscuro mb-3 sm:mb-4">Reserva Tu Sesión</h2>
+              <p className="text-amor-gris max-w-2xl mx-auto text-sm sm:text-base">
                 Completa el siguiente formulario para comenzar el proceso de reserva de tu sesión de graduación
               </p>
             </motion.div>
@@ -312,16 +312,16 @@ export const GraduacionesPage = () => {
             <div className="max-w-3xl mx-auto">
               {formSubmitted ? (
                 <motion.div 
-                  className="bg-green-50 border border-green-200 text-green-700 p-8 rounded-xl text-center"
+                  className="bg-green-50 border border-green-200 text-green-700 p-5 sm:p-8 rounded-xl text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-3 sm:mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-2xl font-bold mb-2">¡Solicitud Enviada!</h3>
-                  <p className="mb-4">Hemos recibido tu solicitud de reserva. Te contactaremos pronto para confirmar los detalles. También puedes contactarnos directamente por WhatsApp para agilizar el proceso.</p>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">¡Solicitud Enviada!</h3>
+                  <p className="mb-4 text-sm sm:text-base">Hemos recibido tu solicitud de reserva. Te contactaremos pronto para confirmar los detalles. También puedes contactarnos directamente por WhatsApp para agilizar el proceso.</p>
                   <button 
                     className="bg-amor-verde-claro hover:bg-amor-verde-medio text-white font-medium py-2 px-6 rounded-lg transition-colors"
                     onClick={() => setFormSubmitted(false)}
@@ -333,94 +333,102 @@ export const GraduacionesPage = () => {
                 <motion.form 
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="bg-white p-8 rounded-xl shadow-lg"
+                  className="bg-white p-5 sm:p-8 rounded-xl shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
                   {submitError && (
-                    <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg mb-6">
+                    <div className="bg-red-50 border border-red-200 text-red-700 p-3 sm:p-4 rounded-lg mb-5 text-sm sm:text-base">
                       {submitError}
                     </div>
                   )}
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="col-span-1">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Nombre de la Institución *</label>
-                      <input 
-                        type="text" 
-                        name="institucion" 
-                        value={formData.institucion} 
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
-                        required
-                      />
+                  <div className="grid grid-cols-1 gap-4 sm:gap-6">
+                    <div className="col-span-1 sm:grid sm:grid-cols-2 sm:gap-6">
+                      <div className="mb-4 sm:mb-0">
+                        <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Nombre de la Institución *</label>
+                        <input 
+                          type="text" 
+                          name="institucion" 
+                          value={formData.institucion} 
+                          onChange={handleChange}
+                          className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
+                          required
+                        />
+                      </div>
+                      <div className="mb-4 sm:mb-0">
+                        <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Curso *</label>
+                        <input 
+                          type="text" 
+                          name="curso" 
+                          value={formData.curso} 
+                          onChange={handleChange}
+                          className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
+                          required
+                        />
+                      </div>
                     </div>
-                    <div className="col-span-1">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Curso *</label>
-                      <input 
-                        type="text" 
-                        name="curso" 
-                        value={formData.curso} 
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
-                        required
-                      />
-                    </div>
-                    <div className="col-span-2">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Dirección con Comuna de la Sesión *</label>
+                    
+                    <div>
+                      <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Dirección con Comuna de la Sesión *</label>
                       <input 
                         type="text" 
                         name="direccion" 
                         value={formData.direccion} 
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
+                        className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
                         required
                       />
                     </div>
-                    <div className="col-span-2">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Nombre y Teléfono de la Encargada *</label>
+                    
+                    <div>
+                      <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Nombre y Teléfono de la Encargada *</label>
                       <input 
                         type="text" 
                         name="encargada" 
                         value={formData.encargada} 
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
+                        className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
                         required
                       />
                     </div>
-                    <div className="col-span-1">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Opción De Diseño Elegida *</label>
-                      <select 
-                        name="diseno" 
-                        value={formData.diseno} 
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
-                        required
-                      >
-                        <option value="">Seleccionar...</option>
-                        <option value="20x30-2fotos">Cuadro 20x30 cm - 2 fotos</option>
-                        <option value="20x30-3fotos">Cuadro 20x30 cm - 3 fotos</option>
-                        <option value="30x40-2fotos">Cuadro 30x40 cm - 2 fotos</option>
-                        <option value="30x40-3fotos">Cuadro 30x40 cm - 3 fotos</option>
-                      </select>
+                    
+                    <div className="sm:grid sm:grid-cols-2 sm:gap-6">
+                      <div className="mb-4 sm:mb-0">
+                        <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Opción De Diseño Elegida *</label>
+                        <select 
+                          name="diseno" 
+                          value={formData.diseno} 
+                          onChange={handleChange}
+                          className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
+                          required
+                        >
+                          <option value="">Seleccionar...</option>
+                          <option value="20x30-2fotos">Cuadro 20x30 cm - 2 fotos</option>
+                          <option value="20x30-3fotos">Cuadro 20x30 cm - 3 fotos</option>
+                          <option value="30x40-2fotos">Cuadro 30x40 cm - 2 fotos</option>
+                          <option value="30x40-3fotos">Cuadro 30x40 cm - 3 fotos</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Cantidad Total de Cuadros *</label>
+                        <input 
+                          type="number" 
+                          name="cantidad" 
+                          value={formData.cantidad} 
+                          onChange={handleChange}
+                          className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
+                          min="1"
+                          required
+                        />
+                      </div>
                     </div>
-                    <div className="col-span-1">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Cantidad Total de Cuadros *</label>
-                      <input 
-                        type="number" 
-                        name="cantidad" 
-                        value={formData.cantidad} 
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
-                        min="1"
-                        required
-                      />
-                    </div>
-                    <div className="col-span-2">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Profesor lleva cuadro? *</label>
-                      <div className="flex gap-6 mt-1">
+                    
+                    <div>
+                      <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Profesor lleva cuadro? *</label>
+                      <div className="flex gap-4 sm:gap-6 mt-1">
                         <label className="flex items-center">
                           <input 
                             type="radio" 
@@ -430,7 +438,7 @@ export const GraduacionesPage = () => {
                             onChange={handleRadioChange}
                             className="mr-2 text-amor-rosa focus:ring-amor-rosa"
                           />
-                          Sí
+                          <span className="text-sm sm:text-base">Sí</span>
                         </label>
                         <label className="flex items-center">
                           <input 
@@ -441,46 +449,48 @@ export const GraduacionesPage = () => {
                             onChange={handleRadioChange}
                             className="mr-2 text-amor-rosa focus:ring-amor-rosa"
                           />
-                          No
+                          <span className="text-sm sm:text-base">No</span>
                         </label>
                       </div>
                     </div>
-                    <div className="col-span-2">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Listado de Alumnos</label>
+                    
+                    <div>
+                      <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Listado de Alumnos</label>
                       <textarea 
                         name="listadoAlumnos" 
                         value={formData.listadoAlumnos} 
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
-                        rows={5}
+                        className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
+                        rows={4}
                         placeholder="Escribe aquí los nombres de los alumnos, uno por línea. Ejemplo:
 1. Juan Pérez
 2. María González
 3. Pedro Sánchez"
                       />
-                      <p className="text-sm text-gray-500 mt-1">Puedes escribir el listado directamente o copiarlo desde otro documento.</p>
+                      <p className="text-xs sm:text-sm text-gray-500 mt-1">Puedes escribir el listado directamente o copiarlo desde otro documento.</p>
                     </div>
-                    <div className="col-span-2">
-                      <label className="block text-amor-verde-oscuro font-medium mb-2">Nombre de Profesor/a Jefe</label>
+                    
+                    <div>
+                      <label className="block text-amor-verde-oscuro font-medium mb-1 sm:mb-2 text-sm sm:text-base">Nombre de Profesor/a Jefe</label>
                       <input 
                         type="text" 
                         name="nombreProfesor" 
                         value={formData.nombreProfesor} 
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all"
+                        className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amor-rosa focus:border-transparent transition-all text-sm sm:text-base"
                       />
                     </div>
                   </div>
 
-                  <div className="mt-8 text-center">
+                  <div className="mt-6 sm:mt-8 text-center">
                     <button 
                       type="submit"
-                      className={`bg-amor-rosa hover:bg-amor-malva text-white font-semibold py-3 px-10 rounded-lg shadow-lg transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                      className={`bg-amor-rosa hover:bg-amor-malva text-white font-semibold py-2 sm:py-3 px-8 sm:px-10 rounded-lg shadow-lg transition-all text-sm sm:text-base ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center">
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <svg className="animate-spin -ml-1 mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
@@ -488,7 +498,7 @@ export const GraduacionesPage = () => {
                         </span>
                       ) : "Enviar Solicitud de Reserva"}
                     </button>
-                    <p className="text-sm text-gray-500 mt-4">Al enviar este formulario, recibirás una confirmación y serás contactado pronto</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4">Al enviar este formulario, recibirás una confirmación y serás contactado pronto</p>
                   </div>
                 </motion.form>
               )}
