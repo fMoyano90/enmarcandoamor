@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     name: 'Roxana Rodriguez',
-    role: 'Apoderada Colegio San Sebastián, 4to Medio A - 2024',
+    role: 'Apoderada Colegio San Sebastián, Los Andes. 4to Medio A - 2024',
     text: 'Recomiendo 💯% los Servicios Fotográficos. La  Atención prestada es cordial, te ayuda a elegir  elegir la mejor opción  en diseño. Sus tiempos de entrega  se cumplen en el plazo establecido y su precio es acordé al mercado. Experiencia cómoda y grata. 👌🏻',
     avatar: testimonio1
   },
