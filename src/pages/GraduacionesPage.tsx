@@ -239,7 +239,7 @@ export const GraduacionesPage = () => {
                 },
                 {
                   title: "Duración y Reserva", 
-                  description: "Cada sesión dura aproximadamente 1 hora. Reserva tu sesión con un abono del 50% y paga el saldo el día de la sesión. Los detalles para el depósito te serán proporcionados."
+                  description: "Cada sesión dura aproximadamente 1 hora y media. Reserva tu sesión con un abono del 50% y paga el saldo el día de la sesión. Los detalles para el depósito te serán proporcionados."
                 },
                 {
                   title: "Horario y Ubicación", 
@@ -251,7 +251,7 @@ export const GraduacionesPage = () => {
                 },
                 {
                   title: "Entrega de Cuadros", 
-                  description: "La magia toma tiempo, tus cuadros estarán listos para entrega dentro de las 3 semanas siguientes a la última fotografía."
+                  description: "La magia toma tiempo, tus cuadros estarán listos para entrega dentro de las 4 semanas siguientes a la última fotografía."
                 },
                 {
                   title: "Control de Calidad", 
