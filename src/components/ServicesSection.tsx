@@ -53,10 +53,10 @@ export const ServicesSection = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <section id="servicios" className="py-20 bg-amor-verde-claro/5">
-      <div className="container mx-auto px-4">
+    <section id="servicios" className="py-20 bg-amor-verde-claro/5 overflow-x-hidden">
+      <div className="px-4 sm:px-6 md:px-8">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -69,7 +69,7 @@ export const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <motion.div 
             className="bg-white rounded-xl shadow-lg overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}

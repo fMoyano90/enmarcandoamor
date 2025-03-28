@@ -6,9 +6,8 @@ import graduacionHorizontal3 from '../assets/graduacion-horizontal-3.png';
 
 import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
 import viajeHorizontal1 from '../assets/viaje-horizontal-1.png';
-import graduacionVertical1 from '../assets/graduacion-vertical-1.png';
-// import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
-// import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
+import amorHorizontal1 from '../assets/amor-horizontal-1.png';
+import familiaHorizontal1 from '../assets/familia-horizontal-1.png';
 
 // Definimos las imágenes de la galería
 const galleryImages = [
@@ -32,7 +31,7 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: graduacionVertical1,
+    src: amorHorizontal1,
     alt: 'Cuadro especial día del amor',
     category: 'Amor'
   },
@@ -44,9 +43,9 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: graduacionHorizontal2,
-    alt: 'Cuadro de graduación personalizado con fotos',
-    category: 'Graduación'
+    src: familiaHorizontal1,
+    alt: 'Cuadro de recuerdo familiar personalizado',
+    category: 'Familia'
   }
 ];
 
@@ -74,6 +73,7 @@ const GalleryImage = ({ src, alt, category, index, onClick }: GalleryImageProps)
           src={src} 
           alt={alt} 
           className="w-full h-full object-cover object-center"
+          loading="lazy"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
@@ -100,10 +100,10 @@ export const GallerySection = () => {
   };
 
   return (
-    <section id="galeria" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="galeria" className="py-20 overflow-x-hidden">
+      <div className="px-4 sm:px-6 md:px-8">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -115,7 +115,7 @@ export const GallerySection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {galleryImages.map((image, index) => (
             <GalleryImage 
               key={image.id} 
@@ -142,6 +142,7 @@ export const GallerySection = () => {
                 src={galleryImages[currentImage].src} 
                 alt={galleryImages[currentImage].alt} 
                 className="max-h-[80vh] max-w-full mx-auto object-contain"
+                loading="lazy"
               />
               <div className="text-white text-center mt-4">
                 <p>{galleryImages[currentImage].alt}</p>

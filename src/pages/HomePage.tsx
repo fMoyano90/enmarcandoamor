@@ -9,7 +9,7 @@ import { Footer } from '../components/Footer';
 
 export const HomePage = () => {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <ServicesSection />

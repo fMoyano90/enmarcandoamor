@@ -71,11 +71,11 @@ export const BenefitsSection = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-gradient-to-br from-amor-verde-claro/5 to-amor-rosa/5">
+    <section id="beneficios" className="py-20 bg-gradient-to-br from-amor-verde-claro/5 to-amor-rosa/5 overflow-x-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <motion.div 
-            className="lg:w-1/2"
+            className="lg:w-1/2 order-2 lg:order-1"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -88,7 +88,8 @@ export const BenefitsSection = () => {
                 <img 
                   src={amistadVertical1}
                   alt="Cuadro personalizado con emociones" 
-                  className="rounded-2xl shadow-xl h-1/4"
+                  className="rounded-2xl shadow-xl"
+                  loading="lazy"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px]">
                   <p className="text-amor-rosa font-medium text-sm">"Cada cuadro cuenta una historia única y especial, la tuya."</p>
@@ -97,7 +98,7 @@ export const BenefitsSection = () => {
             </div>
           </motion.div>
 
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 order-1 lg:order-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

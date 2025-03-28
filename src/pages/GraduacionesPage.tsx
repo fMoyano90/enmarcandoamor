@@ -86,9 +86,9 @@ export const GraduacionesPage = () => {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white pt-20">
+      <main className="min-h-screen bg-white pt-20 overflow-x-hidden">
         {/* Hero Section para Graduaciones */}
-        <section className="bg-gradient-to-b from-amor-rosa/10 to-amor-malva/10 py-20">
+        <section className="bg-gradient-to-b from-amor-rosa/10 to-amor-malva/10 py-20 overflow-x-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-10">
               <motion.div 
@@ -118,15 +118,15 @@ export const GraduacionesPage = () => {
                 </motion.button>
               </motion.div>
               <motion.div 
-                className="md:w-1/2"
+                className="md:w-1/2 overflow-hidden"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <div className="relative">
-                  <div className="absolute -top-4 -left-4 w-64 h-64 bg-amor-rosa/20 rounded-full filter blur-3xl"></div>
-                  <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-amor-verde-claro/20 rounded-full filter blur-3xl"></div>
-                  <div className="relative bg-white p-4 rounded-2xl shadow-xl">
+                  <div className="absolute -top-4 -left-4 w-48 h-48 md:w-64 md:h-64 bg-amor-rosa/20 rounded-full filter blur-3xl"></div>
+                  <div className="absolute -bottom-8 -right-8 w-48 h-48 md:w-64 md:h-64 bg-amor-verde-claro/20 rounded-full filter blur-3xl"></div>
+                  <div className="relative bg-white p-3 md:p-4 rounded-2xl shadow-xl">
                     <img 
                       src={graduacionHorizontal1}
                       alt={`Cuadros de graduación promoción ${currentYear}`}
