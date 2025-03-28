@@ -3,6 +3,17 @@
 ## Descripción del Proyecto
 Enmarcando Amor es un sitio web enfocado en la venta de cuadros personalizados donde las personas pueden enmarcar sus recuerdos más importantes o regalar recuerdos enmarcados a otras personas. El negocio tiene como mercado principal las graduaciones escolares a fin de año, aunque también atiende otras ocasiones especiales como cumpleaños y aniversarios.
 
+## Enfoque Geográfico y Nicho de Mercado
+- **Ubicación:** Valle del Aconcagua, Chile (principalmente ciudades de Los Andes y San Felipe)
+- **Nicho principal:** Colegios locales y sus eventos de graduación
+- **Nichos secundarios:** Personas que desean regalar o conservar recuerdos para ocasiones especiales:
+  - Cumpleaños
+  - Aniversarios
+  - Día del padre/madre
+  - Matrimonios
+  - Primeras comuniones
+  - Viajes y momentos especiales
+
 ## Tecnologías Principales
 
 ### Framework y Lenguaje
@@ -61,6 +72,30 @@ El proyecto cuenta con diversas imágenes organizadas por categorías para los d
 
 Estas imágenes se utilizan en diferentes secciones del sitio para mostrar ejemplos de productos y ambientar las páginas según la temática correspondiente.
 
+## Optimización SEO
+El sitio ha sido optimizado para SEO local y de nicho con las siguientes implementaciones:
+
+### Metadatos Fundamentales
+- **Title**: "Enmarcando Amor | Cuadros Personalizados Los Andes y San Felipe"
+- **Description**: Enfocada en cuadros personalizados para graduaciones en colegios del Valle del Aconcagua
+- **Keywords**: Incluyen términos relevantes como "cuadros personalizados", "graduación", "colegios Los Andes", etc.
+- **Geo-localización**: Metaetiquetas específicas para Chile y las localidades atendidas
+
+### Optimización Social
+- **Open Graph y Twitter Cards**: Para mejorar la presentación cuando se comparte en redes sociales
+- **Canonical URL**: Para evitar problemas de contenido duplicado
+
+### Structured Data
+- **Schema.org LocalBusiness**: Proporciona a los motores de búsqueda información estructurada sobre:
+  - Tipo de negocio
+  - Ubicación geográfica (Los Andes)
+  - Área de servicio (Valle del Aconcagua)
+  - Rango de precios
+  - Servicios ofrecidos
+  - Información de contacto
+
+Esta implementación SEO mejora la visibilidad local del negocio y aumenta las posibilidades de aparecer en resultados relevantes para búsquedas relacionadas con cuadros personalizados en la región.
+
 ## Funcionalidades Esperadas
 Basado en la naturaleza del negocio y las tecnologías instaladas:
 
@@ -72,8 +107,8 @@ Basado en la naturaleza del negocio y las tecnologías instaladas:
 
 ## SEO y Metadatos
 - El sitio está en español (lang="es")
-- Descripción meta: "Cuadros personalizados para graduaciones, cumpleaños, aniversarios y ocasiones especiales. Productos de alta calidad hechos con amor."
-- Título: "Enmarcando Amor | Cuadros Personalizados"
+- Descripción meta: "Enmarcando Amor: Cuadros personalizados en Los Andes y San Felipe. Especialistas en recuerdos de graduación para colegios del Valle del Aconcagua. También para cumpleaños, matrimonios, aniversarios y fechas especiales."
+- Título: "Enmarcando Amor | Cuadros Personalizados Los Andes y San Felipe"
 
 ## Herramientas de Desarrollo
 - **ESLint**: Para garantizar la calidad del código
