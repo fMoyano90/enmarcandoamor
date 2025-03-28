@@ -22,7 +22,7 @@ const galleryImages = [
     id: 2,
     src: viajeHorizontal1,
     alt: 'Cuadro de viaje personalizado',
-    category: 'Aniversario'
+    category: 'Viaje'
   },
   {
     id: 3,
