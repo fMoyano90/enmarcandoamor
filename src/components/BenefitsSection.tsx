@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import amistadVertical1 from '../assets/amistad-vertical-1.png';
 
 interface BenefitItemProps {
   icon: React.ReactNode;
@@ -85,9 +86,9 @@ export const BenefitsSection = () => {
               <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-amor-verde-claro/20 rounded-full filter blur-3xl"></div>
               <div className="relative">
                 <img 
-                  src="https://via.placeholder.com/600x500?text=Cuadros+Personalizados" 
+                  src={amistadVertical1}
                   alt="Cuadro personalizado con emociones" 
-                  className="rounded-2xl shadow-xl"
+                  className="rounded-2xl shadow-xl h-1/4"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px]">
                   <p className="text-amor-rosa font-medium text-sm">"Cada cuadro cuenta una historia única y especial, la tuya."</p>

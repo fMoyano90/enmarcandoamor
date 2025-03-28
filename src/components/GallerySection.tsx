@@ -1,41 +1,50 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+import graduacionHorizontal2 from '../assets/graduacion-horizontal-2.png';
+import graduacionHorizontal3 from '../assets/graduacion-horizontal-3.png';
+
+import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
+import viajeHorizontal1 from '../assets/viaje-horizontal-1.png';
+import graduacionVertical1 from '../assets/graduacion-vertical-1.png';
+// import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
+// import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
+
 // Definimos las imágenes de la galería
 const galleryImages = [
   {
     id: 1,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+1',
+    src: graduacionHorizontal2,
     alt: 'Cuadro de graduación personalizado',
     category: 'Graduación'
   },
   {
     id: 2,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+2',
-    alt: 'Cuadro de aniversario personalizado',
+    src: viajeHorizontal1,
+    alt: 'Cuadro de viaje personalizado',
     category: 'Aniversario'
   },
   {
     id: 3,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+3',
-    alt: 'Cuadro de cumpleaños personalizado',
-    category: 'Cumpleaños'
+    src: graduacionHorizontal1,
+    alt: 'Cuadro de graduación personalizado',
+    category: 'Graduación'
   },
   {
     id: 4,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+4',
+    src: graduacionVertical1,
     alt: 'Cuadro especial día del amor',
     category: 'Amor'
   },
   {
     id: 5,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+5',
-    alt: 'Cuadro personalizado regalo especial',
-    category: 'Regalo'
+    src: graduacionHorizontal3,
+    alt: 'Cuadro de graduación personalizado',
+    category: 'Graduación'
   },
   {
     id: 6,
-    src: 'https://via.placeholder.com/600x400?text=Cuadro+6',
+    src: graduacionHorizontal2,
     alt: 'Cuadro de graduación personalizado con fotos',
     category: 'Graduación'
   }
@@ -52,7 +61,7 @@ interface GalleryImageProps {
 const GalleryImage = ({ src, alt, category, index, onClick }: GalleryImageProps) => {
   return (
     <motion.div 
-      className="relative overflow-hidden rounded-lg shadow-md group cursor-pointer"
+      className="relative overflow-hidden rounded-lg shadow-md group cursor-pointer aspect-[4/3]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -60,11 +69,13 @@ const GalleryImage = ({ src, alt, category, index, onClick }: GalleryImageProps)
       whileHover={{ scale: 1.03 }}
       onClick={onClick}
     >
-      <img 
-        src={src} 
-        alt={alt} 
-        className="w-full h-64 object-cover"
-      />
+      <div className="w-full h-full">
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
         <div>
           <span className="inline-block bg-amor-rosa text-white px-2 py-1 rounded text-xs mb-2">{category}</span>
@@ -118,7 +129,7 @@ export const GallerySection = () => {
         {/* Lightbox modal */}
         {lightboxOpen && currentImage !== null && (
           <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={closeLightbox}>
-            <div className="relative max-w-4xl mx-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="relative max-w-4xl mx-auto w-full" onClick={(e) => e.stopPropagation()}>
               <button 
                 className="absolute top-4 right-4 text-white bg-amor-rosa/80 rounded-full p-2 hover:bg-amor-rosa transition-colors"
                 onClick={closeLightbox}
@@ -130,7 +141,7 @@ export const GallerySection = () => {
               <img 
                 src={galleryImages[currentImage].src} 
                 alt={galleryImages[currentImage].alt} 
-                className="max-h-[80vh] mx-auto"
+                className="max-h-[80vh] max-w-full mx-auto object-contain"
               />
               <div className="text-white text-center mt-4">
                 <p>{galleryImages[currentImage].alt}</p>

@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+import graduacionHorizontal2 from '../assets/graduacion-vertical-2.png';
+import viajeVertical1 from '../assets/viaje-vertical-1.png';
+
 export const HeroSection = () => {
   const currentYear = new Date().getFullYear();
 
@@ -68,7 +71,7 @@ export const HeroSection = () => {
               <div className="relative bg-white p-4 rounded-2xl shadow-xl transform rotate-3">
                 <div className="bg-amor-verde-oscuro/10 p-2 rounded-xl">
                   <img 
-                    src="https://via.placeholder.com/600x400?text=Cuadro+de+Graduación" 
+                    src={graduacionHorizontal2} 
                     alt="Cuadro de graduación personalizado" 
                     className="rounded-lg object-cover w-full h-auto"
                   />
@@ -77,9 +80,9 @@ export const HeroSection = () => {
               <div className="absolute -bottom-10 -left-10 bg-white p-3 rounded-xl shadow-lg transform -rotate-6">
                 <div className="bg-amor-rosa/10 p-1 rounded-lg">
                   <img 
-                    src="https://via.placeholder.com/150?text=Cumpleaños" 
-                    alt="Cuadro de cumpleaños personalizado" 
-                    className="rounded-lg object-cover w-32 h-32"
+                    src={viajeVertical1}
+                    alt="Cuadro de viaje personalizado" 
+                    className="rounded-lg object-cover w-72 h-auto"
                   />
                 </div>
               </div>

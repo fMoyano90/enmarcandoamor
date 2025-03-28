@@ -5,6 +5,9 @@ import { Navbar } from '../components/Navbar';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs.config';
 
+import graduacionHorizontal1 from '../assets/graduacion-vertical-1.png';
+
+
 export const GraduacionesPage = () => {
   const currentYear = new Date().getFullYear();
   const formRef = useRef<HTMLFormElement>(null);
@@ -125,7 +128,7 @@ export const GraduacionesPage = () => {
                   <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-amor-verde-claro/20 rounded-full filter blur-3xl"></div>
                   <div className="relative bg-white p-4 rounded-2xl shadow-xl">
                     <img 
-                      src={`https://via.placeholder.com/600x400?text=Cuadros+de+Graduación+${currentYear}`}
+                      src={graduacionHorizontal1}
                       alt={`Cuadros de graduación promoción ${currentYear}`}
                       className="rounded-lg object-cover w-full h-auto"
                     />
