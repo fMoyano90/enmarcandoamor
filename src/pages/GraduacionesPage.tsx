@@ -86,7 +86,7 @@ export const GraduacionesPage = () => {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white pt-24">
+      <main className="min-h-screen bg-white pt-20">
         {/* Hero Section para Graduaciones */}
         <section className="bg-gradient-to-b from-amor-rosa/10 to-amor-malva/10 py-20">
           <div className="container mx-auto px-4">

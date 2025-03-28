@@ -33,9 +33,10 @@ const ServiceCard = ({ icon, title, description, price, delay }: ServiceCardProp
           {description}
         </p>
         <div className="flex justify-between items-center">
-          <span className="text-xs font-semibold bg-amor-rosa/10 text-amor-rosa px-3 py-1 rounded-full">
-            Desde {price}
-          </span>
+          <div className="bg-amor-rosa/10 text-amor-rosa px-3 py-1 rounded-lg">
+            <span className="text-xs font-medium">Desde</span>
+            <span className="text-lg font-bold ml-1">{price}</span>
+          </div>
           <button 
             onClick={handleWhatsAppClick}
             className="text-amor-verde-oscuro hover:text-amor-rosa transition-colors font-medium flex items-center gap-1"
@@ -88,9 +89,10 @@ export const ServicesSection = () => {
                 Conmemora ese día tan especial con un diseño único que captura el logro académico y la emoción del momento.
               </p>
               <div className="flex justify-between items-center">
-                <span className="text-xs font-semibold bg-amor-rosa/10 text-amor-rosa px-3 py-1 rounded-full">
-                  Desde $13.000
-                </span>
+                <div className="bg-amor-rosa/10 text-amor-rosa px-3 py-1 rounded-lg">
+                  <span className="text-xs font-medium">Desde</span>
+                  <span className="text-lg font-bold ml-1">$13.000</span>
+                </div>
                 <Link 
                   to="/graduaciones" 
                   className="text-amor-verde-oscuro hover:text-amor-rosa transition-colors font-medium flex items-center gap-1"

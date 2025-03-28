@@ -15,7 +15,7 @@ export const Navbar = () => {
   // Función para manejar el scroll y cambiar el estilo del navbar
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 5) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
