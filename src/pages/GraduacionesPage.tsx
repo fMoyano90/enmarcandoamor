@@ -194,18 +194,30 @@ export const GraduacionesPage = () => {
               ))}
             </div>
 
+            {/* Promociones Especiales - Enhanced */}
             <motion.div 
-              className="mt-12 bg-amor-verde-claro/10 p-6 rounded-xl text-center"
+              className="mt-12 bg-gradient-to-r from-amor-rosa to-amor-malva p-8 rounded-xl text-center shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-amor-verde-oscuro mb-3">Promociones Especiales</h3>
-              <p className="text-lg text-amor-verde-oscuro">
-                <span className="font-bold">Por compras sobre 25 cuadros, ¡gratis uno para el profesor!</span>
+              <h3 className="text-2xl font-bold text-white mb-4">¡Promociones Imperdibles!</h3>
+              <p className="text-lg text-white mb-4">
+                <span className="font-semibold">🎁 Por compras sobre 25 cuadros, ¡gratis uno para el profesor!</span>
               </p>
-              <p className="text-amor-gris mt-2">Fotos tamaño 15x20 cm $2.500 c/u</p>
+              <p className="text-white/90 mb-6">📸 Fotos adicionales tamaño 15x20 cm a solo $2.500 c/u</p>
+              
+              {/* Urgency Message */}
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                <p className="text-xl font-bold text-white animate-pulse">
+                  🚨 ¡GRAN OPORTUNIDAD! 🚨
+                </p>
+                <p className="text-lg text-white mt-2">
+                  Todas las reservas efectuadas <span className="font-bold underline">antes del 31 de Julio</span> tendrán además un <span className="font-bold text-2xl">10% de DESCUENTO</span> adicional.
+                </p>
+                <p className="text-sm text-white/80 mt-2">¡No te quedes fuera!</p>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -512,4 +524,4 @@ export const GraduacionesPage = () => {
       <Footer />
     </>
   );
-}; 
+};
