@@ -14,7 +14,7 @@ const testimonials = [
   {
     id: 2,
     name: "Ariana Daniela Pérez Castro",
-    role: "Apoderada Colegio San Sebastián, Los Andes. 8vo Básico - 2024",
+    role: "Apoderada Colegio Perfecto de la Fuente, Rinconada. 8vo Básico - 2024",
     text: "Hola, quería recomendar a Camila, con su trabajo nos hizo bellos cuadros para licenciatura de 8vo básico. Muy responsable y atenta, toma en cuenta si al alumno le gusta o no la foto, y puede volver a sacar otra. Buena comunicación también, 💯 recomendada.",
     avatar: testimonio2,
   },

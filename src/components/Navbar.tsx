@@ -30,13 +30,29 @@ export const Navbar = () => {
 
   // Función para cerrar el menú móvil cuando se hace clic en un enlace
   const handleLinkClick = (sectionId: string) => {
+    // Primero cerrar el menú móvil
     setIsOpen(false);
     
-    // Scroll suave hacia la sección
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Usar setTimeout para asegurar que el menú se cierre antes de hacer scroll
+    setTimeout(() => {
+      // Scroll suave hacia la sección
+      const element = document.getElementById(sectionId);
+      if (element) {
+        // Calcular posición de scroll considerando la altura del navbar
+        const navbarHeight = document.querySelector('nav')?.offsetHeight || 0;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        
+        // Definir offset según el ancho de la pantalla
+        const isMobile = window.innerWidth < 768; // 768px es el breakpoint md de Tailwind
+        const scrollOffset = isMobile ? 160 : 0; // +100 para móvil, +20 para desktop
+        
+        // Hacer scroll con compensación para el navbar fijo y offset adecuado para el dispositivo
+        window.scrollTo({
+          top: elementPosition - navbarHeight + (isMobile ? scrollOffset : -scrollOffset),
+          behavior: 'smooth'
+        });
+      }
+    }, 100); // Pequeño retraso para asegurar que el menú se cerró
   };
 
   // Función para manejar el clic en el botón de WhatsApp
@@ -217,19 +233,28 @@ export const Navbar = () => {
                       Inicio
                     </Link>
                     <a 
-                      onClick={() => handleLinkClick('precios')} 
+                      onClick={() => {
+                        handleLinkClick('precios');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Precios
                     </a>
                     <a 
-                      onClick={() => handleLinkClick('proceso')} 
+                      onClick={() => {
+                        handleLinkClick('proceso');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Proceso
                     </a>
                     <a 
-                      onClick={() => handleLinkClick('formulario')} 
+                      onClick={() => {
+                        handleLinkClick('formulario');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Reservar
@@ -238,25 +263,37 @@ export const Navbar = () => {
                 ) : (
                   <>
                     <a 
-                      onClick={() => handleLinkClick('servicios')} 
+                      onClick={() => {
+                        handleLinkClick('servicios');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Servicios
                     </a>
                     <a 
-                      onClick={() => handleLinkClick('galeria')} 
+                      onClick={() => {
+                        handleLinkClick('galeria');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Galería
                     </a>
                     <a 
-                      onClick={() => handleLinkClick('beneficios')} 
+                      onClick={() => {
+                        handleLinkClick('beneficios');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Beneficios
                     </a>
                     <a 
-                      onClick={() => handleLinkClick('testimonios')} 
+                      onClick={() => {
+                        handleLinkClick('testimonios');
+                        setIsOpen(false);
+                      }} 
                       className="font-medium text-amor-gris hover:text-amor-rosa transition-colors cursor-pointer"
                     >
                       Testimonios

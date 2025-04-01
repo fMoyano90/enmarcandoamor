@@ -254,7 +254,7 @@ export const GraduacionesPage = () => {
                 },
                 {
                   title: "Duración y Reserva", 
-                  description: "Cada sesión dura aproximadamente 1 hora y media. Reserva tu sesión con un abono del 50% y paga el saldo el día de la sesión. Los detalles para el depósito te serán proporcionados."
+                  description: "Cada sesión dura como mínimo 1 hora y media. Reserva tu sesión con un abono del 30% y paga el saldo el día de la sesión. Los detalles para el depósito te serán proporcionados."
                 },
                 {
                   title: "Horario y Ubicación", 
