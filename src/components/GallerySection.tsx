@@ -7,7 +7,7 @@ import graduacionHorizontal3 from '../assets/graduacion-horizontal-3.png';
 import graduacionHorizontal1 from '../assets/graduacion-horizontal-1.png';
 import viajeHorizontal1 from '../assets/viaje-horizontal-1.png';
 import amorHorizontal1 from '../assets/amor-horizontal-1.png';
-import familiaHorizontal1 from '../assets/familia-horizontal-1.png';
+import amorHorizontal2 from '../assets/amor-horizontal-2.png';
 
 // Definimos las imágenes de la galería
 const galleryImages = [
@@ -43,7 +43,7 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: familiaHorizontal1,
+    src: amorHorizontal2,
     alt: 'Cuadro de recuerdo familiar personalizado',
     category: 'Familia'
   }

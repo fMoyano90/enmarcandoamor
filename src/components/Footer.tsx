@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import logoSvg from '../assets/logo.svg';
+import logoSvg from '../assets/logo-2.svg';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,14 +16,14 @@ export const Footer = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center mb-4">
+              <div className="flex items-center">
                 <img 
                   src={logoSvg}
                   alt="Enmarcando Amor"
-                  className="h-10 sm:h-12 w-auto mr-3 bg-white rounded-lg p-1"
+                  className="h-24 sm:h-28 w-auto"
                 />
               </div>
-              <p className="text-gray-300 mb-6 text-sm sm:text-base">
+              <p className="text-gray-300 mb-6 text-sm sm:text-base mt-0 pt-0">
                 Creamos cuadros personalizados que capturan tus momentos más especiales.
                 Transformamos tus recuerdos en piezas únicas para conservar por siempre.
               </p>
